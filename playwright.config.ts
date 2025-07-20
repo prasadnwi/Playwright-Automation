@@ -32,7 +32,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     video: 'retain-on-failure',
     screenshot: 'only-on-failure',
-    headless: false,
+    headless:  process.env.CI ? true : false,
   },
 
   /* Configure projects for major browsers */
