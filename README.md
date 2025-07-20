@@ -7,7 +7,7 @@ This project demonstrates end-to-end web automation using [Playwright](https://p
 ## Features
 
 * **Automated UI Testing**: Runs tests on the web application.
-* **Cross-Browser Testing**: Supports **Chromium** and **Firefox** for multi-browser testing.
+* **Cross-Browser Testing**: Supports **Chromium**, **Safari** and **Firefox** for multi-browser testing.
 * **Advanced Playwright Configurations**:
 
   * Headless testing
@@ -149,9 +149,10 @@ This strategy ensures that the tests are flexible, easy to update, and able to c
 
 ## CI/CD Integration
 
-You can integrate this project into your CI/CD pipeline (e.g., GitHub Actions, GitLab CI, Jenkins). For example, in GitHub Actions, you can create a simple action to run the tests on push or pull request:
+You can integrate this project into your CI/CD pipeline (e.g., GitHub Actions, GitLab CI, Jenkins). This project integrates GitHub Actions to run tests automatically whenever a Pull Request (PR) is raised for the main branch. The tests will be executed on different browsers, and the results will be reported in the GitHub Actions interface.
 
-<!-- add relevent yml file and configuration -->
+* On every PR, the action will trigger the test suite, ensuring that code changes do not break existing functionality. 
+* The test results will be shown directly in the GitHub Actions logs, making it easier to review failures or issues.
 
 ---
 
