@@ -130,6 +130,20 @@ Feel free to modify the following files to tailor the project to your needs:
 
 * **`tests/todo.spec.ts`**: Add or modify test scenarios.
 * **`playwright.config.ts`**: Adjust browser configurations, retries, timeouts, etc.
+* **`dataSet/vaildUSer.ts`**: Modify data -> handle this
+
+---
+
+## Data Handling Strategy
+
+To improve scalability, separation of concerns, and maintainability, the test data is externalized from the test cases and organized in a modular manner. This allows for easy management of test data, reusability across multiple test cases, and cleaner code.
+
+* **`Centralized Test Data`**: All test data (such as login credentials, user profiles, and product information) is stored in a dedicated /test-data/ directory, making it easy to maintain and scale.
+* **`Externalized Data`**: Test data is stored in JSON files to separate data from test logic. This ensures changes to data can be made without modifying the core test structure.
+* **`Data-Driven Testing`**: By using loops to iterate through datasets, we can easily simulate different test scenarios with minimal code duplication.
+* **`Dynamic Data Generation`**: For user-specific or constantly changing data (like email addresses or user names), dynamic data is generated using helper functions to keep tests fresh and unique.
+
+This strategy ensures that the tests are flexible, easy to update, and able to cover a wide range of scenarios without redundancy.
 
 ---
 
